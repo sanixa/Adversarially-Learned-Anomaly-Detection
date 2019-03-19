@@ -1,0 +1,9 @@
+Model,Dataset,Method,Weight,Label,Step,AUROC,Precision,Recall,F1 score,Random Seed,Date
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,1276,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 01:57:30 2019
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,14046,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 02:02:44 2019
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,12769,0.5,0.2,1.0,0.33333333333333337,10,Wed Mar 20 02:08:27 2019
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,16600,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 02:29:55 2019
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,17877,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 02:32:01 2019
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,19154,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 02:34:24 2019
+alad_snFalse_dzzFalse,cicids2017,ch,dzzenabledFalse,0,20431,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 02:35:55 2019
+alad_snFalse_dzzFalse,cicids2017,fm,dzzenabledFalse,0,20431,0.5,0.2,1.0,0.33333333333333337,42,Wed Mar 20 02:35:55 2019
