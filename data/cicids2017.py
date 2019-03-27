@@ -20,7 +20,7 @@ def get_valid(label=0, scale=False, *args):
 
 def get_shape_input():
     """Get shape of the dataset for cicids2017"""
-    return (None, 78)
+    return (None, 76)
 
 def get_shape_label():
     """Get shape of the labels in cicids2017"""
@@ -47,6 +47,8 @@ def _get_dataset(scale):
     #df = pd.read_csv("data/kddcup.data_10_percent_corrected", header=None, names=col_names)
     df = pd.read_csv("data/MachineLearningCVE/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv")
     #text_l = ['protocol_type', 'service', 'flag', 'land', 'logged_in', 'is_host_login', 'is_guest_login']
+    df.drop('Flow Bytes/s', axis=1, inplace=True)
+    df.drop(' Flow Packets/s', axis=1, inplace=True)
     text_l = []
 
     for name in text_l:
