@@ -359,7 +359,7 @@ def train_and_test(dataset, nb_epochs, degree, random_seed, label,
     logdir = create_logdir(dataset, label, random_seed, allow_zz, score_method,
                            do_spectral_norm)
 
-    saver = tf.train.Saver(max_to_keep=2)
+    saver = tf.train.Saver(max_to_keep=1)
     save_model_secs = None if enable_early_stop else 20
     sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=None, saver=saver, save_model_secs=save_model_secs) 
 
@@ -497,6 +497,7 @@ def train_and_test(dataset, nb_epochs, degree, random_seed, label,
             epoch += 1
 
         sv.saver.save(sess, logdir+'/model.ckpt', global_step=step)
+        #saver.save(sess, logdir+'/model.ckpt', global_step=step)
 
         logger.warn('Testing evaluation...')
 
