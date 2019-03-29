@@ -54,20 +54,20 @@ def _get_dataset(scale):
     for name in text_l:
         _encode_text_dummy(df, name)
 
-    labels = df['label'].copy()
+    labels = df[' Label'].copy()
     labels[labels != 'BENIGN'] = 0
     labels[labels == 'BENIGN'] = 1
 
-    df['label'] = labels
+    df[' Label'] = labels
 
     df_train = df.sample(frac=0.5, random_state=42)
     df_test = df.loc[~df.index.isin(df_train.index)]
     df_valid = df_train.sample(frac=0.1, random_state=42)
     # df_train = df_train.loc[~df_train.index.isin(df_valid.index)]
 
-    x_train, y_train = _to_xy(df_train, target='label')
-    x_valid, y_valid = _to_xy(df_valid, target='label')
-    x_test, y_test = _to_xy(df_test, target='label')
+    x_train, y_train = _to_xy(df_train, target=' Label')
+    x_valid, y_valid = _to_xy(df_valid, target=' Label')
+    x_test, y_test = _to_xy(df_test, target=' Label')
 
     y_train = y_train.flatten().astype(int)
     y_valid = y_valid.flatten().astype(int)
